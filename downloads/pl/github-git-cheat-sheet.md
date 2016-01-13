@@ -15,7 +15,7 @@ http://windows.github.com
 ### GitHub na Mac
 http://mac.github.com
 
-Dystrybucje Git-a na Linux oraz POSIX sa dostepne na oficjalnej stronie Git SCM.
+Dystrybucje Git-a na Linux oraz POSIX są dostępne na oficjalnej stronie Git SCM.
 
 ### Git na wszystkie platformy
 http://git-scm.com
@@ -25,16 +25,16 @@ Skonfiguruj informacje użytkownika dla wszystkich lokalnych repozytoriów
 
 ```$ git config --global user.name "[name]"```
 
-Ustawia twoja nazwe, ktora bedzie dołączona podczas commita
+Ustawia twoja nazwę, która będzie dołączona podczas zatwierdzenia
 
 
 ```$ git config --global user.email "[email address]"```
 
-Ustawia twój email który bedzie dołączony do commita
+Ustawia twój email który będzie dołączony do zatwierdzenia
 
 
 ## Tworzenie repozytoriów
-Tworzenie nowego repozytorium lub pobranie juz istniejącego
+Tworzenie nowego repozytorium lub pobranie już istniejącego
 
 
 ```$ git init [project-name]```
@@ -55,7 +55,7 @@ Tworzy nowe lokalne repozytorium, o danej nazwie
 {% capture colTwo %}
 
 ## Wprowadzanie zmian
-Przeglądanie zmian oraz manipulacja commitem
+Przeglądanie zmian oraz manipulacja zatwierdzeniem
 
 
 ```$ git status```
@@ -79,13 +79,13 @@ Shows file differences between staging and the last file version
 
 
 ```$ git reset [file]```
-Resetuje plik, ale zatrzymuje jego 
+Resetuje plik, ale zatrzymuje jego
 
 
 ```$ git commit -m"[descriptive message]"```
 Dodaje bieżący stan na stałe do histoerii wersji
 
-## Zmiany grupowe Group changes
+## Zmiany grupowe
 Name a series of commits and combine completed efforts
 
 
@@ -105,7 +105,7 @@ Zmieniamy aktywną gałąź do tej podanej w nazwie, oraz uaktualnia robocze fol
 
 
 ```$ git merge [branch-name]```
-Scala historie zmian z podanej gałęzi do aktualnej gałęźi na której pracujemy 
+Scala historie zmian z podanej gałęzi do aktualnej gałęźi na której pracujemy
 
 
 ```$ git branch -d [branch-name]```
@@ -121,7 +121,8 @@ Usuwa podaną gałąź
 ---
 
 {% capture colThree %}
-## Refaktoryzacja nazw plików Refactor file names
+## Refaktoryzacja nazw plików
+
 Zmiana oraz usuwanie wersjonowanych plików
 
 
@@ -194,12 +195,12 @@ Lista historii wersji aktualnej gałęźi
 
 ```$ git log --follow [file]```
 
-Lista histoerii wersjii dla danego pliku, zawiera takze zmiany nazwy tego pliku 
+Lista histoerii wersjii dla danego pliku, zawiera takze zmiany nazwy tego pliku
 
 
 ```$ git diff [first-branch]...[second-branch]```
 
-Pokazuje różnice zmian pomiedzy dwoma gałeźiami 
+Pokazuje różnice zmian pomiedzy dwoma gałeźiami
 
 
 ```$ git show [commit]```
