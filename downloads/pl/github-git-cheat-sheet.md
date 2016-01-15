@@ -7,7 +7,7 @@ leadingpath: ../
 
 {% capture colOne %}
 ## Instalacja Git-a
-Dodatkowo GitHub dostarcza Ci desktopowego klienta który posiada interfejs graficzny z najbardziej popularnymi akcjami jakie możesz zrobić na repozytorium.
+Dodatkowo Github posiada aplikacje desktopowa z interfejsem graficzny z najbardziej popularnymi akcjami jakie możesz zrobić na repozytorium.
 
 ### GitHub na Windows
 http://windows.github.com
@@ -21,25 +21,25 @@ Dystrybucje Git-a na Linux oraz POSIX są dostępne na oficjalnej stronie Git SC
 http://git-scm.com
 
 ## Konfiguracja narzędzia
-Skonfiguruj informacje użytkownika dla wszystkich lokalnych repozytoriów
+Konfiguruje informacje użytkownika dla wszystkich lokalnych repozytoriów
 
 ```$ git config --global user.name "[name]"```
 
-Ustawia twoja nazwę, która będzie dołączona podczas zatwierdzenia
+Ustawia nazwę, która będzie dołączona podczas zatwierdzenia
 
 
 ```$ git config --global user.email "[email address]"```
 
-Ustawia twój email który będzie dołączony do zatwierdzenia
+Ustawia adres email, który będzie dołączony podczas zatwierdzenia
 
 
 ## Tworzenie repozytoriów
-Tworzenie nowego repozytorium lub pobranie już istniejącego
+Tworzy nowe repozytorium lub pobiera już istniejące
 
 
 ```$ git init [project-name]```
 
-Tworzy nowe lokalne repozytorium, o danej nazwie
+Tworzy nowe lokalne repozytorium o danej nazwie
 
 
 ```$ git clone [url]```
@@ -70,22 +70,23 @@ Pokazuje różnice zmian które nie zostały jeszcze zatwierdzone
 
 ```$ git add [file]```
 
-Dodaje bieżący stan pliku do przygotowania wersjonowania
+Dodaje bieżący stan pliku do wersjonowania
 
 
 ```$ git diff --staged```
 
-Shows file differences between staging and the last file version
+Pokazuje różnice zmian plików pomiedzy zatwierdzonymi do wersjonowania a ich ostatnią historią
 
 
 ```$ git reset [file]```
-Resetuje plik, ale zatrzymuje jego
+Resetuje plik z zatwierdzenia, ale zatrzymuje jego zawartość
 
 
 ```$ git commit -m"[descriptive message]"```
-Dodaje bieżący stan na stałe do histoerii wersji
+Dodaje bieżący stan na stałe do historii wersji wraz z wiadomością
 
 ## Zmiany grupowe
+
 Name a series of commits and combine completed efforts
 
 
@@ -101,17 +102,17 @@ Tworzy nową gałąź o podanej nazwie
 
 ```$ git checkout [branch-name]```
 
-Zmieniamy aktywną gałąź do tej podanej w nazwie, oraz uaktualnia robocze foldery
+Zmienia aktywną gałąź na podaną w nazwie, oraz uaktualnia robocze foldery
 
 
 ```$ git merge [branch-name]```
-Scala historie zmian z podanej gałęzi do aktualnej gałęźi na której pracujemy
+
+Scala historie zmian gałęzi do aktualnej gałęzi na której pracujemy
 
 
 ```$ git branch -d [branch-name]```
 
 Usuwa podaną gałąź
-
 {% endcapture %}
 <div class="col-md-6">
 {{ colTwo | markdownify }}
@@ -122,7 +123,6 @@ Usuwa podaną gałąź
 
 {% capture colThree %}
 ## Refaktoryzacja nazw plików
-
 Zmiana oraz usuwanie wersjonowanych plików
 
 
@@ -140,19 +140,20 @@ Usuwa pliki z kontroli wersji ale nie usuwa pliku lokalnie
 
 Zmienia nazwe pliku oraz przygotowuje do zatwierdzenia
 
-## Suppress tracking
-Wyłanczanie tymczasowych plików oraz scieżek
+## Wyłączenie śledzeń
+Wyłącza śledzenie tymczasowych plików oraz scieżek
 
 ```
 *.log
 build/
 temp-*
 ```
-Plik tekstowy o nazwie `.gitignore` 
-A text file named `.gitignore` suppresses accidental versioning of files and paths matching the specified patterns
+
+Plik tekstowy o nazwie `.gitignore` wstrzymuje przed przypadkowym wersjonowaniem plików oraz ścieżek które pasują do podanego wzorca
 
 
 ```$ git ls-files --other --ignored --exclude-standard```
+
 Lista wszystkich zignorowanych plików w tym projekcie
 
 ## Cząstkowe zapisywanie
@@ -161,23 +162,22 @@ Trzymanie i odnawianie niedokończonych zmian
 
 ```$ git stash```
 
-Tymczasowo zapisuje wszystkie śledzone zmodyfikowane pliki
+Tymczasowo przetrzymuje wszystkie śledzone pliki które zostały zmodyfikowane do schowka
 
 
 ```$ git stash pop```
 
-Odzyska ostatnie schowane pliki (???)
+Odzyskuje ostatnie pliki które są przechowywane w schowku
 
 
 ```$ git stash list```
 
-Lista wszystkich zmian
+Lista wszystkich przetrzymywanych zmian w schowku
 
 
 ```$ git stash drop```
 
-Odrzuca 
-Discards the most recently stashed changeset
+Odrzuca, usuwa ostatnie zmiany które są przechowywane w schowku 
 {% endcapture %}
 <div class="col-md-6">
 {{ colThree | markdownify }}
@@ -185,22 +185,22 @@ Discards the most recently stashed changeset
 
 {% capture colFour %}
 ## Przeglądanie historii zmian
-Przeglądanie oraz podglądanie jak ewoluowały nasze pliki w projekcie (????)
+Przeglądanie oraz sprawdzanie ewolucji naszego projektu
 
 
 ```$ git log```
 
-Lista historii wersji aktualnej gałęźi
+Lista historii wersji aktualnej gałęzi
 
 
 ```$ git log --follow [file]```
 
-Lista histoerii wersjii dla danego pliku, zawiera takze zmiany nazwy tego pliku
+Lista historii wersji dla danego pliku, zawiera takze zmiany nazwy tego pliku
 
 
 ```$ git diff [first-branch]...[second-branch]```
 
-Pokazuje różnice zmian pomiedzy dwoma gałeźiami
+Pokazuje różnice zmian pomiedzy dwoma gałęziami
 
 
 ```$ git show [commit]```
